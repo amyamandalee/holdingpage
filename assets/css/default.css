@@ -51,6 +51,7 @@
 }
 .hp-foregroundimage {
   position: absolute;
+  z-index: 5;
   }
 
 .hp-image--small {
@@ -85,16 +86,21 @@
 
 .text {
   position: absolute;
-  animation: textlayer 1s both;
+  animation: textlayer .5s forwards;
   animation-delay: 2.5s;
+  /* display: none; */
+  opacity: 0;
 }
 
+
 @keyframes textlayer {
-  0% {
+  from {
     opacity: 0;
+    z-index: 1;
   }
-  100% {
+  to {
     opacity: 1;
+    z-index: 10;
   }
 }
 
